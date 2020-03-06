@@ -75,7 +75,7 @@ class SelectTimeWidget(Widget):
         if not self.is_required:
             minute_choices.insert(0, self.minute_none_value)
         minute_name = self.minute_field % name
-        time_context['minute'] = self.select_widget(attrs, choices=hour_choices).get_context(
+        time_context['minute'] = self.select_widget(attrs, choices=minute_choices).get_context(
             name=minute_name,
             value=context['widget']['value']['minute'],
             attrs={**context['widget']['attrs'], 'id': 'id_%s' % minute_name},
